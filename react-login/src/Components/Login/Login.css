@@ -1,0 +1,20 @@
+.background-poster{
+    background-image: url("../../background.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-card{
+    background: none!important;
+    padding: 15px;
+}
+
+.custom-alert{
+    margin-top: 1rem!important;
+    margin-bottom: 0;
+}
