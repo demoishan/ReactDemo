@@ -28,9 +28,18 @@ function Header() {
                             <li> <Link to="/services">Services</Link></li>
                             <li> <Link to="/contact">Contact</Link></li>
                             {!user && <li> <Link to="/login">Login</Link></li>}
-                            {user && <li> <Link to="/page1">Page1</Link></li>}
-                            {user && <li> <Link to="/page2">Page2</Link></li>}
-                            {user && <li> <Link to="/page3">Page3</Link></li>}
+
+                            {user &&
+                                < li class="drop-down">
+                                    <a href="#">Pages</a>
+                                    <ul>
+                                        <li><Link to="/page1">Page1</Link></li>
+                                        <li><Link to="/page2">Page2</Link></li>
+                                        <li><Link to="/page3">Page3</Link></li>
+                                    </ul>
+                                </li>
+                            }
+                            {user && <li> <Link to="/page2">Movies</Link></li>}
                             {user && <li> <Link to="/Logout">Logout</Link></li>}
                         </ul>
                     </nav>

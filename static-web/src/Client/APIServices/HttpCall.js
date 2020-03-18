@@ -21,7 +21,7 @@ export function LoginPost(obj) {
         })
         .catch(error => {
             console.error('There was an error!');
-            alert('Errorrrrr');
+            alert(error);
         });
 
     return result;

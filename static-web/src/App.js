@@ -1,9 +1,12 @@
 import React from 'react';
-import MyRoute from "./MyRoute"
+import ClientRoute from "./Client/ClientRoute"
+import AdminRoute from "./Admin/AdminRoute"
+
 function App() {
   return (
     <>
-      <MyRoute />
+      <ClientRoute />
+      <AdminRoute />
     </>
   );
 }
