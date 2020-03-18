@@ -78,8 +78,7 @@ function Footer() {
                         &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
   </div>
                     <div className="credits">
-
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        Theme Designed by <a href="https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/#download">BootstrapMade</a>
                     </div>
                 </div>
             </footer>
