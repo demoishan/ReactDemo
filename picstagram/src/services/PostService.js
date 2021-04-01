@@ -1,8 +1,20 @@
 import axios from 'axios'
 import { baseUrl } from '../config/api'
 import Post from '../models/Post'
+import { getCurrentUser } from './UserService'
 
 const apiUrl = baseUrl + '/posts/'
+
+axios.interceptors.request.use(function (config) {
+  // Do something before request is sent
+  config.headers = {
+    'Authorization': 'Bearer ' + (getCurrentUser() ? getCurrentUser().token : '')
+  }
+  return config;
+}, function (error) {
+  // Do something with request error
+  return Promise.reject(error);
+});
 
 export function addPost(post) {
   post.createdBy = '12345asf'
@@ -45,4 +57,9 @@ export function getSinglePost(id) {
       result.data.description,
       result.data.imageUrl
     ))
+}
+
+export function uploadImage(data) {
+  return axios.post(apiUrl + '/upload', data)
+    .then(result => result.data)
 }

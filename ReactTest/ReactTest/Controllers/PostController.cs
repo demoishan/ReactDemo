@@ -73,7 +73,7 @@ namespace ReactTest.Controllers
                 ctx.Posts.Add(new Post()
                 {
                     caption = post.caption,
-                    imageUrl = post.imageUrl,
+                    imageUrl = "http://wallpaperheart.com/wp-content/uploads/2018/07/wallpaper-hd-download-2.jpg",
                     published = true,
                     description = post.description,
                     createdBy = "abcd",

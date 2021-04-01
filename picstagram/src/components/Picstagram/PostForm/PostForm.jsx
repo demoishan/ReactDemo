@@ -55,7 +55,7 @@ class PostForm extends Component {
 
     if(data.caption === '') errors.caption = 'Caption can not be blank'
     if(data.description === '') errors.description = 'Description can not be blank'
-    if(data.imageUrl === '') errors.imageUrl = 'ImageUrl can not be blank'
+    // if(data.imageUrl === '') errors.imageUrl = 'ImageUrl can not be blank'
 
     return errors
   }
