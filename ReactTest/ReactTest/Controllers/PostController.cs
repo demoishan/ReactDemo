@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace ReactTest.Controllers
 {
-    [RoutePrefix("api/post")]
+    [RoutePrefix("api/posts")]
 
     public class PostController : ApiController
     {
@@ -62,6 +62,7 @@ namespace ReactTest.Controllers
         }
 
         [HttpPost]
+        [Route("add")]
         public IHttpActionResult Post(Post post)
         {
             if (!ModelState.IsValid)
@@ -85,6 +86,7 @@ namespace ReactTest.Controllers
         }
 
         [HttpDelete]
+        [Route("delete/{id}")]
         public IHttpActionResult removePost(int id)
         {
             if (id <= 0)

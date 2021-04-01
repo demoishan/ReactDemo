@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ReactTest
 {
@@ -10,6 +11,12 @@ namespace ReactTest
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            //config.EnableCors();
+            //EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "GET,POST");
+            //config.EnableCors();
+
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

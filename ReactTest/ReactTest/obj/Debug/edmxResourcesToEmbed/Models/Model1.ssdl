@@ -11,7 +11,19 @@
     <Property Name="published" Type="bit" />
     <Property Name="createdBy" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="passwordHash" Type="varchar" MaxLength="50" />
+    <Property Name="active" Type="bit" />
+  </EntityType>
   <EntityContainer Name="LoginDBModelStoreContainer">
     <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

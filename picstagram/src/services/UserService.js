@@ -1,12 +1,10 @@
 import axios from 'axios'
 import { baseUrl } from '../config/api'
 
-const loginUrl = baseUrl + '/login'
-
 export function login(credentials) {
-  return axios.post(loginUrl, credentials)
+  return axios.post(baseUrl + '/login/login', credentials)
     .then(result => {
-      localStorage.setItem('user', JSON.stringify(result.data.user))
+      localStorage.setItem('user', JSON.stringify(result.data.name))
       return result.data
     })
 }

@@ -26,5 +26,6 @@ namespace ReactTest.Models
         }
     
         public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
