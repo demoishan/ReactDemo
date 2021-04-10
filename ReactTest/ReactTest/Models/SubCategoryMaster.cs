@@ -12,13 +12,10 @@ namespace ReactTest.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class SubCategoryMaster
     {
-        public int Id { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public Nullable<bool> active { get; set; }
+        public int SubCatId { get; set; }
+        public Nullable<int> CatId { get; set; }
+        public string SubCateName { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace ReactTest.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LoginDBEntities : DbContext
+    public partial class ReactDemoEntities : DbContext
     {
-        public LoginDBEntities()
-            : base("name=LoginDBEntities")
+        public ReactDemoEntities()
+            : base("name=ReactDemoEntities")
         {
         }
     
@@ -25,7 +25,9 @@ namespace ReactTest.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CategoryMaster> CategoryMasters { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<SubCategoryMaster> SubCategoryMasters { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

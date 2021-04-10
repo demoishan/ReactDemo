@@ -12,53 +12,45 @@ namespace ReactTest.Controllers
 
     public class PostController : ApiController
     {
-        LoginDBEntities db = new LoginDBEntities();
+        ReactDemoEntities db = new ReactDemoEntities();
 
         [HttpGet]
         [Route("getAllPosts")]
         public IHttpActionResult get()
         {
-            IList<Post> students = null;
+            IList<Post> obj = null;
 
-            using (var ctx = new LoginDBEntities())
+            using (var ctx = new ReactDemoEntities())
             {
-                //students = ctx.Posts.Include("StudentAddress")
-                //            .Select(s => new StudentViewModel()
-                //            {
-                //                Id = s.StudentID,
-                //                FirstName = s.FirstName,
-                //                LastName = s.LastName
-                //            }).ToList<StudentViewModel>();
-
-                students = ctx.Posts.ToList();
+                obj = ctx.Posts.ToList();
             }
 
-            if (students.Count == 0)
+            if (obj.Count == 0)
             {
                 return NotFound();
             }
 
-            return Ok(students);
+            return Ok(obj);
         }
 
         [HttpGet]
         [Route("getSinglePost/{id}")]
         public IHttpActionResult getSinglePost(int id)
         {
-            Post students = null;
+            Post obj = null;
 
-            using (var ctx = new LoginDBEntities())
+            using (var ctx = new ReactDemoEntities())
             {
 
-                students = ctx.Posts.Where(i => i.id == id).FirstOrDefault();
+                obj = ctx.Posts.Where(i => i.id == id).FirstOrDefault();
             }
 
-            if (students == null)
+            if (obj == null)
             {
                 return NotFound();
             }
 
-            return Ok(students);
+            return Ok(obj);
         }
 
         [HttpPost]
@@ -68,7 +60,7 @@ namespace ReactTest.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");
 
-            using (var ctx = new LoginDBEntities())
+            using (var ctx = new ReactDemoEntities())
             {
                 ctx.Posts.Add(new Post()
                 {
@@ -90,15 +82,15 @@ namespace ReactTest.Controllers
         public IHttpActionResult removePost(int id)
         {
             if (id <= 0)
-                return BadRequest("Not a valid student id");
+                return BadRequest("Not a valid id");
 
-            using (var ctx = new LoginDBEntities())
+            using (var ctx = new ReactDemoEntities())
             {
-                var student = ctx.Posts
+                var obj = ctx.Posts
                     .Where(s => s.id == id)
                     .FirstOrDefault();
 
-                ctx.Entry(student).State = System.Data.Entity.EntityState.Deleted;
+                ctx.Entry(obj).State = System.Data.Entity.EntityState.Deleted;
                 ctx.SaveChanges();
             }
 

@@ -4,9 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2ee0359a0e2e486dad064d08db840e27" Name="Diagram1">
-        <EntityTypeShape EntityType="LoginDBModel.Post" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LoginDBModel.User" Width="1.5" PointX="3.375" PointY="0.75" />
+      <Diagram DiagramId="02ae871e2db943e7938f016612c62903" Name="Diagram1">
+        <EntityTypeShape EntityType="ReactDemoModel.CategoryMaster" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReactDemoModel.Post" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReactDemoModel.SubCategoryMaster" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReactDemoModel.User" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

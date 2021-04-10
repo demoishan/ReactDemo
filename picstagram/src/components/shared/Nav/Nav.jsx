@@ -17,6 +17,7 @@ function Nav(props) {
       <nav className="my-2 my-md-0 mr-md-3"> 
         { user && <Link className="p-2 text-dark" to="/profile">Profile</Link>}
         { user && <Link className="p-2 text-dark" to="/add">Add Post</Link> }
+        <Link className="p-2 text-dark" to="/add2">Form2</Link>
       </nav>
       { !user && <Link className="btn btn-outline-primary mr-1" to="/login">Login</Link> }
       { !user && <Link className="btn btn-outline-secondary mr-1" to="/register">Register</Link> }

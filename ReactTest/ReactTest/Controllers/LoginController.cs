@@ -12,49 +12,49 @@ namespace ReactTest.Controllers
     [RoutePrefix("api/login")]
     public class LoginController : ApiController
     {
-        LoginDBEntities db = new LoginDBEntities();
+        ReactDemoEntities db = new ReactDemoEntities();
 
         [HttpPost]
         [Route("login")]
         public IHttpActionResult Post(User user)
         {
-            User students = null;
+            User obj = null;
 
-            using (var ctx = new LoginDBEntities())
+            using (var ctx = new ReactDemoEntities())
             {
-                user.passwordHash = "123";
-                user.username = "admin";
-                students = ctx.Users.Where(i => i.username == user.username && i.passwordHash == user.passwordHash).FirstOrDefault();
+                //user.password = "123";
+                //user.username = "admin";
+                obj = ctx.Users.Where(i => i.username == user.username && i.password == user.password).FirstOrDefault();
             }
 
-            if (students == null)
+            if (obj == null)
             {
                 return NotFound();
             }
 
-            return Ok(students);
+            return Ok(obj);
         }
 
         [HttpGet]
         [Route("login2")]
         //[EnableCors("*", "*", "*")]
         //[EnableCors(origins: "*", headers: "accept,content-type,origin,x-my-header", methods: "*")]
-        public IHttpActionResult Get(string username = "Admin", string password = "123")
+        public IHttpActionResult Get(string username , string password )
         {
-            User students = null;
+            User obj = null;
 
-            using (var ctx = new LoginDBEntities())
+            using (var ctx = new ReactDemoEntities())
             {
 
-                students = ctx.Users.Where(i => i.username == username && i.passwordHash == password).FirstOrDefault();
+                obj = ctx.Users.Where(i => i.username == username && i.password == password).FirstOrDefault();
             }
 
-            if (students == null)
-            {
-                return NotFound();
-            }
+            //if (obj == null)
+            //{
+            //    return NotFound();
+            //}
 
-            return Ok(students);
+            return Ok(obj);
         }
 
     }

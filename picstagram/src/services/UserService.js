@@ -4,7 +4,7 @@ import { baseUrl } from '../config/api'
 export function login(credentials) {
   return axios.post(baseUrl + '/login/login', credentials)
     .then(result => {
-      localStorage.setItem('user', JSON.stringify(result.data.name))
+      localStorage.setItem('user', JSON.stringify(result.data))
       return result.data
     })
 }

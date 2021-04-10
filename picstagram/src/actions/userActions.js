@@ -7,7 +7,8 @@ export function loginAction(credentials) {
   return (dispatch) => {
     return UserService.login(credentials)
       .then((result) => {
-        dispatch(userLoggedInAction(result.user))
+        // dispatch(userLoggedInAction(result.user))
+        dispatch(userLoggedInAction(result))
         return result
       })
   }

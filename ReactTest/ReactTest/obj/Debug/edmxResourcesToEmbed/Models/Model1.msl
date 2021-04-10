@@ -1,8 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="LoginDBModelStoreContainer" CdmEntityContainer="LoginDBEntities">
+  <EntityContainerMapping StorageEntityContainer="ReactDemoModelStoreContainer" CdmEntityContainer="ReactDemoEntities">
+    <EntitySetMapping Name="CategoryMasters">
+      <EntityTypeMapping TypeName="ReactDemoModel.CategoryMaster">
+        <MappingFragment StoreEntitySet="CategoryMaster">
+          <ScalarProperty Name="CatId" ColumnName="CatId" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Posts">
-      <EntityTypeMapping TypeName="LoginDBModel.Post">
+      <EntityTypeMapping TypeName="ReactDemoModel.Post">
         <MappingFragment StoreEntitySet="Post">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="caption" ColumnName="caption" />
@@ -13,15 +21,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SubCategoryMasters">
+      <EntityTypeMapping TypeName="ReactDemoModel.SubCategoryMaster">
+        <MappingFragment StoreEntitySet="SubCategoryMaster">
+          <ScalarProperty Name="SubCatId" ColumnName="SubCatId" />
+          <ScalarProperty Name="CatId" ColumnName="CatId" />
+          <ScalarProperty Name="SubCateName" ColumnName="SubCateName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="LoginDBModel.User">
+      <EntityTypeMapping TypeName="ReactDemoModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="active" ColumnName="active" />
-          <ScalarProperty Name="passwordHash" ColumnName="passwordHash" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="active" ColumnName="active" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
