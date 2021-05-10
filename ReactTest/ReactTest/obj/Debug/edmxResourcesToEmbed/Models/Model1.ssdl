@@ -7,6 +7,27 @@
     <Property Name="CatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CatName" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Degrees">
+    <Key>
+      <PropertyRef Name="DegreeId" />
+    </Key>
+    <Property Name="DegreeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DegreeName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hobby">
+    <Key>
+      <PropertyRef Name="HobbyId" />
+    </Key>
+    <Property Name="HobbyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HobbyDetail" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Post">
     <Key>
       <PropertyRef Name="id" />
@@ -17,6 +38,14 @@
     <Property Name="imageUrl" Type="varchar" MaxLength="500" />
     <Property Name="published" Type="bit" />
     <Property Name="createdBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="StateName" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="SubCategoryMaster">
     <Key>
@@ -36,10 +65,15 @@
     <Property Name="username" Type="varchar" MaxLength="50" />
     <Property Name="password" Type="varchar" MaxLength="50" />
     <Property Name="active" Type="bit" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="ReactDemoModelStoreContainer">
     <EntitySet Name="CategoryMaster" EntityType="Self.CategoryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Degrees" EntityType="Self.Degrees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hobby" EntityType="Self.Hobby" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SubCategoryMaster" EntityType="Self.SubCategoryMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

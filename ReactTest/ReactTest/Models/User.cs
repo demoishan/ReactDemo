@@ -20,5 +20,6 @@ namespace ReactTest.Models
         public string username { get; set; }
         public string password { get; set; }
         public Nullable<bool> active { get; set; }
+        public string Role { get; set; }
     }
 }

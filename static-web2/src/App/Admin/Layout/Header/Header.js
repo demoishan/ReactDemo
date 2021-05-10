@@ -54,6 +54,13 @@ function Header() {
                                             <p>Form2</p>
                                         </NavLink>
                                     </li>
+
+                                    <li className="nav-item">
+                                        <NavLink exact={true} className="nav-link" activeClassName='active' to='/admin/Form3'>
+                                            <i className="far fa-circle nav-icon"></i>
+                                            <p>Form3</p>
+                                        </NavLink>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

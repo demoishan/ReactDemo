@@ -5,10 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="02ae871e2db943e7938f016612c62903" Name="Diagram1">
-        <EntityTypeShape EntityType="ReactDemoModel.CategoryMaster" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ReactDemoModel.Post" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ReactDemoModel.SubCategoryMaster" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ReactDemoModel.User" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReactDemoModel.CategoryMaster" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.Country" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.Degree" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.Hobby" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.Post" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.State" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.SubCategoryMaster" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ReactDemoModel.User" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

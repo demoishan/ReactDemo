@@ -4,41 +4,75 @@
     <EntitySetMapping Name="CategoryMasters">
       <EntityTypeMapping TypeName="ReactDemoModel.CategoryMaster">
         <MappingFragment StoreEntitySet="CategoryMaster">
-          <ScalarProperty Name="CatId" ColumnName="CatId" />
           <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="CatId" ColumnName="CatId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="ReactDemoModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Degrees">
+      <EntityTypeMapping TypeName="ReactDemoModel.Degree">
+        <MappingFragment StoreEntitySet="Degrees">
+          <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+          <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobbies">
+      <EntityTypeMapping TypeName="ReactDemoModel.Hobby">
+        <MappingFragment StoreEntitySet="Hobby">
+          <ScalarProperty Name="HobbyDetail" ColumnName="HobbyDetail" />
+          <ScalarProperty Name="HobbyId" ColumnName="HobbyId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Posts">
       <EntityTypeMapping TypeName="ReactDemoModel.Post">
         <MappingFragment StoreEntitySet="Post">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="caption" ColumnName="caption" />
-          <ScalarProperty Name="description" ColumnName="description" />
-          <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
-          <ScalarProperty Name="published" ColumnName="published" />
           <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="published" ColumnName="published" />
+          <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="caption" ColumnName="caption" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="ReactDemoModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SubCategoryMasters">
       <EntityTypeMapping TypeName="ReactDemoModel.SubCategoryMaster">
         <MappingFragment StoreEntitySet="SubCategoryMaster">
-          <ScalarProperty Name="SubCatId" ColumnName="SubCatId" />
-          <ScalarProperty Name="CatId" ColumnName="CatId" />
           <ScalarProperty Name="SubCateName" ColumnName="SubCateName" />
+          <ScalarProperty Name="CatId" ColumnName="CatId" />
+          <ScalarProperty Name="SubCatId" ColumnName="SubCatId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="ReactDemoModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

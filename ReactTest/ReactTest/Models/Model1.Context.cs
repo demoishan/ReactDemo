@@ -26,7 +26,11 @@ namespace ReactTest.Models
         }
     
         public virtual DbSet<CategoryMaster> CategoryMasters { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Degree> Degrees { get; set; }
+        public virtual DbSet<Hobby> Hobbies { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<State> States { get; set; }
         public virtual DbSet<SubCategoryMaster> SubCategoryMasters { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
